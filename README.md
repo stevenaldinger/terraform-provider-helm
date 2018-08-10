@@ -47,6 +47,14 @@ Now copy the binary to the Terraform's plugins folder, if is your first plugin m
 
 ### Installation from sources
 
+#### Easy Installation/Build with Docker/Docker-Compose
+
+1. `cd scripts`
+2. `docker-compose run provider-builder`
+3. Linux binary will be at your hosts `terraform-provider-helm/bin/terraform-provider-helm`
+
+#### Hard way
+
 If you wish to compile the provider from source code, you'll first need [Go](http://www.golang.org) installed on your machine (version >=1.9 is *required*). You'll also need to correctly setup a [GOPATH](http://golang.org/doc/code.html#GOPATH), as well as adding `$GOPATH/bin` to your `$PATH`.
 
 Clone repository to: `$GOPATH/src/github.com/mcuadros/terraform-provider-helm`
@@ -106,4 +114,3 @@ License
 -------
 
 Mozilla Public License 2.0, see [LICENSE](LICENSE)
-

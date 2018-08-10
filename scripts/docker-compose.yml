@@ -1,0 +1,16 @@
+version: '3'
+services:
+  provider-builder:
+    container_name: provider-builder
+    hostname: provider-builder
+    image: stevenaldinger/terraform-provider-helm:0.5.2
+    command:
+    - mv
+    - /go/src/github.com/mcuadros/terraform-provider-helm/terraform-provider-helm
+    - /persistent-bin/terraform-provider-helm
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: "no"
+    volumes:
+    - ../bin:/persistent-bin
